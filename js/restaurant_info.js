@@ -126,9 +126,6 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
-  title.innerHTML = 'Reviews';
-  container.appendChild(title);
 
   if (!reviews) {
     const noReviews = document.createElement('p');
@@ -136,18 +133,18 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     container.appendChild(noReviews);
     return;
   }
+  
   const ul = document.getElementById('reviews-list');
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });
-  container.appendChild(ul);
 }
 
 /**
  * Create review HTML and add it to the webpage.
  */
 createReviewHTML = (review) => {
-  const li = document.createElement('li');
+  const li = document.createElement('article');
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
