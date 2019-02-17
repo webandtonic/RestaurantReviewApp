@@ -23,6 +23,8 @@
   "dependencies": {
     "browser-sync": "^2.26.3",
     "gulp-sass": "^4.0.2",
-    "lodash.update": "^4.10.2"
+    "lodash": "^4.17.11",
+    "lodash.update": "^4.10.2",
+    "minimatch": "^3.0.2"
   }
 }
