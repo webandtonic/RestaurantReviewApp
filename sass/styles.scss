@@ -412,7 +412,7 @@ body {
 			}
 
 			#restaurants-list {
-				padding: 20px;
+				padding: 15px;
 				flex-direction: row;
 				justify-content: space-between;
 
@@ -420,14 +420,15 @@ body {
 					width: 45%;
 					max-width: 45%;
 					height: 35%;
-					padding: 20px;
+					max-height: 200px;
+					padding: 15px;
 					flex-wrap: wrap;
 					justify-content: space-between;
 					align-content: space-between;
 
 					.restaurant-img {
-						width: auto;
-						height: 100%;
+						width: 45%;
+						height: auto;
 						order: 1;
 						margin-top: auto;
 					}
@@ -435,6 +436,7 @@ body {
 					h2 {
 						width: 45%;
 						margin: 0;
+						font-size: 1.2rem;
 					}
 
 					p {
@@ -444,6 +446,8 @@ body {
 					a {
 						width: 45%;
 						margin: 0;
+						padding: 5px 10px;
+						border-bottom: 0;
 					}
 				}
 
@@ -536,6 +540,12 @@ body {
 			a {
 
 			}
+		}
+	}
+
+	@media screen and (max-width: 999px) {
+		* {
+			font-size: 10px;
 		}
 	}
 
