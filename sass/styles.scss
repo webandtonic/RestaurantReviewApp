@@ -484,7 +484,6 @@ body {
 				justify-content: center;
 				align-content: flex-start;
 
-
 				article {
 					flex-wrap: wrap;
 					justify-content: flex-start;
@@ -503,12 +502,9 @@ body {
 					}
 
 					h2 {
-
 						font-size: 1.2rem;
-
 						margin: 0 0 5px;
 						width: calc(100% - 190px);
-
 					}
 
 					p {
@@ -516,12 +512,10 @@ body {
 					}
 
 					a {
-
 						border-bottom: none;
-width: calc(100% - 190px);
+						width: calc(100% - 190px);
 						margin: auto 0 0;
 						padding: 5px;
-
 					}
 				}
 
@@ -940,12 +934,7 @@ width: calc(100% - 190px);
 		}
 
 	}
-
-	@media screen and (max-width: 699px) {
-		* {
-			font-size: 10px;
-		}
-
+	@media screen and (max-width: 799px) {
 		body {
 
 
@@ -960,7 +949,7 @@ width: calc(100% - 190px);
 			header {
 
 				nav {
-
+					height: 60px;
 
 					h1 {
 
@@ -991,66 +980,13 @@ width: calc(100% - 190px);
 					}
 				}
 			}
+		#maincontent {
+			height: calc(100vh - 120px);
+		}
 
-			#maincontent {
-
-
-				#map-container {
-
-
-					#map {
-
-					}
-				}
-
-				.filter-options {
-
-
-					h3 {
-
-					}
-
-					select {
-
-					}
-				}
-
-				#restaurants-list {
-					padding: 20px;
-
-					article {
-						margin: 10px 0;
-						width: 100%;
-						max-width: 100%;
-						height: 40%;
-
-						.restaurant-img {
-							height: 100%;
-							width: auto;
-						}
-
-						h2 {
-
-						}
-
-						p {
-
-						}
-
-						a {
-
-						}
-					}
-
-					.spacer {
-
-					}
-				}
-			}
-
-			&.inside #maincontent {
-
-
+		&.inside #maincontent {
+			height: calc(100vh - 160px);
+			padding: 0 20px 20px;
 
 
 				#map-container {
@@ -1119,7 +1055,7 @@ width: calc(100% - 190px);
 
 
 			#footer {
-
+				height: 60px;
 
 
 
@@ -1129,6 +1065,103 @@ width: calc(100% - 190px);
 			}
 		}
 
+	}
+
+	@media screen and (max-width: 699px) {
+		* {
+			font-size: 10px;
+		}
+
+		body {
+
+			#maincontent {
+
+				#restaurants-list {
+					padding: 20px;
+
+					article {
+						margin: 10px 0;
+						width: 100%;
+						max-width: 100%;
+						height: 40%;
+
+						.restaurant-img {
+							height: 100%;
+							width: auto;
+						}
+
+						h2 {
+
+						}
+
+						p {
+
+						}
+
+						a {
+
+						}
+					}
+
+					.spacer {
+
+					}
+				}
+			}
+
+			&.inside #maincontent {
+				#map-container {
+					padding-top: 50px;
+					height: 65%;
+						#map {
+						}
+				}
+
+				#restaurant-container {  //mixin? -> reviews-container
+						height: 65%;
+						position: relative;
+						padding-top: 50px;
+
+						#restaurant-name {
+							position: absolute;
+							top: 20px;
+							left: 20px;
+							width: calc(100vw - 80px);
+						}
+
+						.restaurant-content {
+							#restaurant-img {
+							}
+							#restaurant-cuisine {
+							}
+							#restaurant-address {
+							}
+							#restaurant-hours {
+								margin: 0;
+								tr {
+									td {
+									}
+								}
+							}
+						}
+					}
+
+				#reviews-container {
+						height: 35%;
+
+						#reviews-list {
+							article {
+								width: 100%;
+							}
+						}
+					}
+
+				#footer {
+					height: 60px;
+				}
+			}
+
+		}
 	}
 
 	@media screen and (max-width: 499px) {
@@ -1156,13 +1189,13 @@ width: calc(100% - 190px);
 
 
 						a {
-
+							font-size: 1rem;
 						}
 					}
 				}
 
 				#breadcrumb {
-
+					padding: 10px 10px 15px;
 
 					li {
 
@@ -1241,11 +1274,15 @@ width: calc(100% - 190px);
 
 			&.inside #maincontent {
 
+				padding: 0 10px 10px;
 
-
+				height: calc(100vh - 140px);
+				overflow-y: scroll;
 
 				#map-container {
-
+					height: 40vh;
+					width: 100%;
+					padding: 10px 0;
 
 					#map {
 
@@ -1253,10 +1290,15 @@ width: calc(100% - 190px);
 				}
 
 				#restaurant-container {  //mixin? -> reviews-container
-
+					height: auto;
+					width: 100%;
+					padding: 10px 0;
 
 					#restaurant-name {
-
+						position: relative;
+						top: auto;
+						left: auto;
+						margin: 0 0 10px;
 					}
 
 					.restaurant-content {
@@ -1264,11 +1306,11 @@ width: calc(100% - 190px);
 
 
 						#restaurant-img {
-
+							width: 80%;
 						}
 
 						#restaurant-cuisine {
-
+							width: 80%;
 						}
 
 						#restaurant-address {
@@ -1289,7 +1331,8 @@ width: calc(100% - 190px);
 				}
 
 				#reviews-container {
-
+					height: auto;
+					padding: 10px 0;
 
 					h2 {
 
@@ -1298,7 +1341,7 @@ width: calc(100% - 190px);
 					#reviews-list {
 
 						article {
-
+							padding: 10px 10px 0;
 
 							p {
 

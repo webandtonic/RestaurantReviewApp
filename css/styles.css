@@ -519,6 +519,17 @@ body {
       width: 47%;
       max-width: 47%; } }
 
+@media screen and (orientation: portrait) and (max-width: 799px) {
+  body header nav {
+    height: 60px; }
+  body #maincontent {
+    height: calc(100vh - 120px); }
+  body.inside #maincontent {
+    height: calc(100vh - 160px);
+    padding: 0 20px 20px; }
+  body #footer {
+    height: 60px; } }
+
 @media screen and (orientation: portrait) and (max-width: 699px) {
   * {
     font-size: 10px; }
@@ -531,11 +542,35 @@ body {
       height: 40%; }
       body #maincontent #restaurants-list article .restaurant-img {
         height: 100%;
-        width: auto; } }
+        width: auto; }
+  body.inside #maincontent #map-container {
+    padding-top: 50px;
+    height: 65%; }
+  body.inside #maincontent #restaurant-container {
+    height: 65%;
+    position: relative;
+    padding-top: 50px; }
+    body.inside #maincontent #restaurant-container #restaurant-name {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: calc(100vw - 80px); }
+    body.inside #maincontent #restaurant-container .restaurant-content #restaurant-hours {
+      margin: 0; }
+  body.inside #maincontent #reviews-container {
+    height: 35%; }
+    body.inside #maincontent #reviews-container #reviews-list article {
+      width: 100%; }
+  body.inside #maincontent #footer {
+    height: 60px; } }
 
 @media screen and (orientation: portrait) and (max-width: 499px) {
   body header nav {
     height: 50px; }
+    body header nav h1 a {
+      font-size: 1rem; }
+  body header #breadcrumb {
+    padding: 10px 10px 15px; }
   body #maincontent {
     height: calc(100vh - 100px); }
     body #maincontent .filter-options h3 {
@@ -559,5 +594,31 @@ body {
           width: 40%; }
         body #maincontent #restaurants-list article a {
           width: 40%; }
+  body.inside #maincontent {
+    padding: 0 10px 10px;
+    height: calc(100vh - 140px);
+    overflow-y: scroll; }
+    body.inside #maincontent #map-container {
+      height: 40vh;
+      width: 100%;
+      padding: 10px 0; }
+    body.inside #maincontent #restaurant-container {
+      height: auto;
+      width: 100%;
+      padding: 10px 0; }
+      body.inside #maincontent #restaurant-container #restaurant-name {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 0 10px; }
+      body.inside #maincontent #restaurant-container .restaurant-content #restaurant-img {
+        width: 80%; }
+      body.inside #maincontent #restaurant-container .restaurant-content #restaurant-cuisine {
+        width: 80%; }
+    body.inside #maincontent #reviews-container {
+      height: auto;
+      padding: 10px 0; }
+      body.inside #maincontent #reviews-container #reviews-list article {
+        padding: 10px 10px 0; }
   body #footer {
     height: 50px; } }
