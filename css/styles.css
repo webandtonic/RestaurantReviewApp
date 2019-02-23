@@ -545,10 +545,11 @@ body {
     body #maincontent #restaurants-list {
       padding: 10px; }
       body #maincontent #restaurants-list article {
-        margin: 10px 0;
+        margin: 0 0 10px;
+        padding: 10px;
         width: 100%;
         max-width: 100%;
-        height: 50%; }
+        height: 150px; }
         body #maincontent #restaurants-list article .restaurant-img {
           height: 100%;
           width: auto; }
