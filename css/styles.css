@@ -124,7 +124,7 @@ body {
         width: 15%;
         max-width: 300px;
         margin: 15px;
-        padding: 25px; }
+        padding: 20px; }
         body #maincontent #restaurants-list article .restaurant-img {
           display: block;
           margin: 0;
@@ -278,6 +278,140 @@ body {
     body #footer a {
       font-weight: 200;
       text-transform: uppercase; }
+
+@media (orientation: landscape) and (max-width: 1200px) {
+  body header nav {
+    height: 60px; }
+    body header nav h1 a {
+      font-size: 1.4rem; }
+  body #maincontent {
+    height: calc(100vh - 120px); }
+    body #maincontent #restaurants-list {
+      margin: 0;
+      padding: 0 0 0 10px; }
+      body #maincontent #restaurants-list article {
+        height: 90%;
+        width: 18%;
+        max-width: 300px;
+        margin: 10px;
+        padding: 10px; }
+        body #maincontent #restaurants-list article h2 {
+          font-size: 1.2rem;
+          margin: 10px 0; }
+        body #maincontent #restaurants-list article a {
+          padding: 5px 10px; }
+      body #maincontent #restaurants-list .spacer {
+        width: 10px; }
+  body #footer {
+    height: 60px; } }
+
+@media (orientation: landscape) and (max-width: 800px), (min-aspect-ratio: 7 / 4) and (max-height: 800px) {
+  body {
+    font-size: 0.8rem; }
+    body header {
+      width: 60%; }
+      body header nav {
+        height: 40px; }
+        body header nav h1 a {
+          font-size: 1rem; }
+      body header #breadcrumb {
+        padding: 10px 40px 15px;
+        list-style: none;
+        background-color: #eee;
+        font-size: 10px;
+        margin: 0;
+        width: 100%; }
+        body header #breadcrumb li {
+          display: inline; }
+          body header #breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none; }
+          body header #breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline; }
+        body header #breadcrumb li + li:before {
+          padding: 8px;
+          color: black;
+          content: "/\00a0"; }
+    body #maincontent {
+      height: calc(100vh - 80px);
+      width: 60%;
+      margin: 0; }
+      body #maincontent #map-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40%; }
+      body #maincontent .filter-options {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        body #maincontent .filter-options h3 {
+          margin: 0; }
+        body #maincontent .filter-options select {
+          height: auto;
+          width: auto;
+          margin: 0; }
+      body #maincontent #restaurants-list {
+        height: calc(100% - 40px);
+        padding: 5px;
+        width: 100%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-line-pack: start;
+            align-content: flex-start; }
+        body #maincontent #restaurants-list article {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          height: 150px;
+          width: 100%;
+          max-width: 100%;
+          margin: 0 0 5px 0;
+          padding: 5px; }
+          body #maincontent #restaurants-list article .restaurant-img {
+            height: 100%;
+            width: auto;
+            margin: 0;
+            -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                    order: 1; }
+          body #maincontent #restaurants-list article h2 {
+            font-size: 1.2rem;
+            margin: 0 0 5px;
+            width: calc(100% - 190px); }
+          body #maincontent #restaurants-list article p {
+            width: calc(100% - 190px); }
+          body #maincontent #restaurants-list article a {
+            border-bottom: none;
+            width: calc(100% - 190px);
+            margin: auto 0 0;
+            padding: 5px; }
+        body #maincontent #restaurants-list .spacer {
+          display: none; }
+    body #footer {
+      height: 40px;
+      width: 60%;
+      font-size: 0.8rem; } }
 
 @media screen and (orientation: portrait) {
   body #maincontent #map-container {
