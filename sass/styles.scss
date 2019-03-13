@@ -6,6 +6,10 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 12px;
+
+	&:focus {
+		outline: purple solid 2px;
+	}
 }
 
 body {
@@ -89,6 +93,11 @@ body {
 				height: 100%;
 			  width: 100%;
 			  background-color: #ccc;
+				border: 2px solid #ccc;
+
+				&:focus {
+					border-color: purple;
+				}
 			}
 		}
 
